@@ -1,0 +1,57 @@
+body {
+    background-image: url('p1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.row {
+    margin: -20px; /* Counteract container padding */
+}
+
+.col-md-3 {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Ensure columns are stacked vertically */
+}
+
+.col-md-3 img {
+    margin-bottom: 10px;
+}
+
+.col-md-3 h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.col-md-3 p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Allow the content to grow and push the button to the bottom */
+}
+
+.col-md-3 a {
+    font-size: 0.9em;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

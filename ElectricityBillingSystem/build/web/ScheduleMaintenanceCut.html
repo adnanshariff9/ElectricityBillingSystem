@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/9557032e05.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <!-- Link to your shared styles.css file -->
+
+    <link rel="stylesheet" href="login.css">
+
+
+    <title>Welcome to Electricity Billing System</title>
+</head>
+<style>body{background-image: url('p12.jpg');}</style>
+
+<body>
+    <!-- Navbar and transparent background code remains the same -->
+    <!-- our code starts here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Electricity Billing System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="adminhome.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="confirmLogout()">Logout</a>
+                </li>
+
+                <script>
+                    function confirmLogout() {
+                        var logoutConfirmed = confirm("Are you sure you want to logout?");
+                        if (logoutConfirmed) {
+                            // Redirect to home.html after logout confirmation
+                            window.location.href = "home.html";
+                        } else {
+                            // Do nothing or handle the cancellation
+                            alert("Logout cancelled.");
+                        }
+                    }
+                </script>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h2>Schedule a Maintenance cut</h2>
+    <!-- Added form tag with the 'action' attribute for redirection -->
+    <form action="ScheduleMaintenanceCut" method="post" onsubmit="return validateForm()">
+
+        <div class="box">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <label for="pincode"><b>Enter the area's Pincode:</b></label>
+            <input type="number" name="pincode" id="pincode" placeholder="Enter the area Pincode">
+            <br/><br/>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-clock"></i>
+            <label for="expectedOutageTill"><b>Expected power outage till:</b></label>
+            <input type="datetime-local" name="expectedoutagetill" id="expectedOutageTill" title="Select date and time for expected outage">
+        <br/><br/></div>
+
+        <div class="box">
+            <i class="fa-solid fa-lightbulb"></i>
+            <label for="availiblityStatus"><b>Select Power Availability:</b></label>
+            <select id="availiblityStatus" name="newConnectionStatus" onchange="handleAvailabilityStatus()" required>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+            <br/><br/>
+        </div>
+        <!-- Added 'type="submit"' to the button and 'form' attribute -->
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+    <div class="footer">
+        <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <!-- Include your Bootstrap JS and dependencies here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-U7Y9T+3b6CQs98ePjkx4U+8p7+cJz94PXXF1BOgS7I/6q1i9T8KgpvZ4Y6Jrm2Io"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script>
+        function handleAvailabilityStatus() {
+            var availabilityStatus = document.getElementById("availiblityStatus").value;
+            var outageTillInput = document.getElementById("expectedOutageTill");
+
+            // Disable expected outage till input if the status is 'Available', enable it otherwise
+            outageTillInput.disabled = (availabilityStatus === 'Available');
+            if (availabilityStatus === 'Available') {
+                outageTillInput.value = ""; // Set to empty if the status is 'Available'
+            }
+        }
+
+        function validateForm() {
+            // Add any additional form validation logic here if needed
+            return true; // Return true to submit the form, false to prevent submission
+        }
+    </script>
+
+</body>
+
+</html>

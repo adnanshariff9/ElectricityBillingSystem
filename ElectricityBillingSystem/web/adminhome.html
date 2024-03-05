@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="icon" href="favicon.png" type="image/png">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="home.css">
+    <title>Admin Home</title>
+</head>
+<body>
+    
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Electricity Billing System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="adminhome.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+  
+
+        <li class="nav-item">
+    <a class="nav-link" href="#" onclick="confirmLogout()">Logout</a>
+</li>
+
+<script>
+    function confirmLogout() {
+        var logoutConfirmed = confirm("Are you sure you want to logout?");
+        if (logoutConfirmed) {
+            // Redirect to home.html after logout confirmation
+            window.location.href = "home.html";
+        } else {
+            // Do nothing or handle the cancellation
+            alert("Logout cancelled.");
+        }
+    }
+</script>
+
+      </ul>
+    </div>
+  </nav>
+    
+    <div class="container">
+        <Center> <h1>Admin Home</h1></center>
+     <hr/>
+    <div class="row">
+      <div class="col-md-3 text-center">
+          <center> <img src="p9.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
+        <h2>Approve Subsidy applications</h2>
+        <p class="mt-auto"><a class="btn btn-secondary" href="SeeNewSubsidyReq" role="button" >View details</a></p>
+      </div>
+        <div class="col-md-3 text-center">
+       <center> <img src="p11.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
+        <h2>Read and Bill an Electricity Meter </h2>
+        <p class="mt-auto"><a class="btn btn-secondary" href="readandbill.html" role="button" >View details</a></p>
+      </div>
+      <div class="col-md-3 text-center">
+          <center> <img src="p10.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
+        <h2>Schedule a Maintenance Cut</h2>
+        <p class="mt-auto"><a class="btn btn-secondary" href="ScheduleMaintenanceCut.html" role="button" >View details</a></p>
+      </div>
+      <div class="col-md-3 text-center">
+          <center> <img src="p6.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
+        <h2>Approve new Connection requests</h2>
+        <p class="mt-auto"><a class="btn btn-secondary" href="SeeNewConnections" role="button" >View details</a></p>
+      </div>
+    </div>
+  </div>
+         
+  <div class="footer">
+        <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>
+  </div> 
+          <!-- Bootstrap JS and dependencies -->
+  <!-- Include your Bootstrap JS and dependencies here -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-U7Y9T+3b6CQs98ePjkx4U+8p7+cJz94PXXF1BOgS7I/6q1i9T8KgpvZ4Y6Jrm2Io"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+  
+</body>
+</html>
