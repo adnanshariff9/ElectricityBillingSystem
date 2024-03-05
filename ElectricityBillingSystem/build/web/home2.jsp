@@ -113,7 +113,7 @@
         <h2>Get your bill online </h2>
         <p> 
 Losing your physical electricity bill is no longer a hassle with the convenience of online billing systems. Easily access and retrieve your bills at your convenience with an internet connection. By going paperless, customers contribute to environmental sustainability and save trees. </p>
-        <p class="mt-auto"><a class="btn btn-secondary" href="#" role="button" >View details »</a></p>
+        <p class="mt-auto"><a class="btn btn-secondary" href="getYourBill.jsp" role="button" >View details »</a></p>
       </div>
       <div class="col-md-3 text-center">
           <center> <img src="p10.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
