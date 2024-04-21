@@ -108,7 +108,8 @@ public class BillingBE extends HttpServlet {
         out.println("<html><body>");
         out.println("<div style='text-align: center;'>");
         out.println("<img src='favicon-32x32.png'>");
-        out.println("<h2>Billing Successful</h2>");
+        out.println("<h2>Electricity Billing System</h2>");
+        out.println("-----------------------------------------------");
         out.println("<p>Meter Number: " + meterNumber + "</p>");
         out.println("<p>Reading Date: " + readingDate + "</p>");
         out.println("<p>Consumption (KWh): " + consumptionKWh + "</p>");
