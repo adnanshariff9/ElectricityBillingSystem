@@ -48,12 +48,35 @@ CREATE TABLE `electricitybilling` (
   KEY `MeterNumber` (`MeterNumber`),
   KEY `electricitybilling_ibfk_2` (`UserID`),
   KEY `electricitybilling_ibfk_3` (`SubsidyID`),
-  CONSTRAINT `electricitybilling_ibfk_3` FOREIGN KEY (`SubsidyID`) REFERENCES `subsidies` (`SubsidyID`),
   CONSTRAINT `electricitybilling_ibfk_1` FOREIGN KEY (`MeterNumber`) REFERENCES `meters` (`MeterNumber`),
-  CONSTRAINT `electricitybilling_ibfk_2` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `electricitybilling_ibfk_2` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`),
+  CONSTRAINT `electricitybilling_ibfk_3` FOREIGN KEY (`SubsidyID`) REFERENCES `subsidies` (`SubsidyID`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 /*Data for the table `electricitybilling` */
+
+insert  into `electricitybilling`(`BillID`,`MeterNumber`,`ReadingDate`,`ConsumptionKWh`,`BillAmount`,`UserID`,`SubsidyAmount`,`SubsidyID`) values 
+(1,'100','2024-02-26',100.00,600.00,1000,NULL,NULL),
+(2,'101','2024-02-26',100.00,600.00,1000,NULL,NULL),
+(3,'101','2024-02-26',100.00,600.00,1001,NULL,NULL),
+(4,'100','2024-02-26',100.00,600.00,1000,NULL,NULL),
+(5,'100','2024-02-26',100.00,600.00,1000,NULL,NULL),
+(6,'100','2024-02-26',250.00,2000.00,1000,NULL,NULL),
+(8,'105','2024-02-26',250.00,2000.00,1000,NULL,NULL),
+(9,'106','2024-02-26',250.00,2000.00,1001,NULL,NULL),
+(10,'104','2024-02-27',100.00,600.00,1000,NULL,NULL),
+(11,'104','2024-02-27',100.00,600.00,1000,NULL,NULL),
+(12,'100','2024-02-27',110.00,770.00,1000,NULL,NULL),
+(13,'100','2024-02-27',100.00,600.00,1000,NULL,NULL),
+(14,'100','2024-02-27',100.00,510.00,1000,NULL,NULL),
+(15,'103','2024-03-09',200.00,1190.00,1000,NULL,NULL),
+(16,'106','2024-03-10',300.00,2040.00,1001,NULL,NULL),
+(17,'100','2024-03-10',105.00,624.75,1000,NULL,NULL),
+(18,'100','2024-03-10',105.00,624.75,1000,NULL,NULL),
+(19,'100','2024-03-10',105.00,624.75,1000,NULL,NULL),
+(20,'100','2024-03-10',105.00,624.75,1000,NULL,NULL),
+(21,'100','2024-03-10',105.00,624.75,1000,NULL,NULL),
+(22,'101','2024-03-10',120.00,714.00,1000,NULL,NULL);
 
 /*Table structure for table `meters` */
 
@@ -79,7 +102,8 @@ insert  into `meters`(`MeterNumber`,`Email`,`userid`,`InstallationDate`) values
 ('102','adnanshariff.9@gmail.com',1000,'2024-02-18'),
 ('103','adnanshariff.9@gmail.com',1000,'2024-02-18'),
 ('104','adnanshariff.9@gmail.com',1000,'2024-02-18'),
-('105','adnanshariff.9@gmail.com',1000,'2024-02-19');
+('105','adnanshariff.9@gmail.com',1000,'2024-02-19'),
+('106','hamza@gmail.com',1001,'2024-02-26');
 
 /*Table structure for table `poweravailability` */
 

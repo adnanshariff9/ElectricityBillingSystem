@@ -41,6 +41,9 @@
         <li class="nav-item active">
           <a class="nav-link" href="about2.jsp">About</a>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="contactus.jsp">Contact us</a>
+        </li>
 
        <li class="nav-item">
     <a class="nav-link" href="#" onclick="confirmLogout()">Logout</a>
@@ -51,7 +54,7 @@
         var logoutConfirmed = confirm("Are you sure you want to logout?");
         if (logoutConfirmed) {
             // Redirect to home.html after logout confirmation
-            window.location.href = "home.html";
+            window.location.href = "logout.jsp";
         } else {
             // Do nothing or handle the cancellation
             alert("Logout cancelled.");
@@ -91,11 +94,14 @@
         electricity in your locality. Additionally, our system facilitates secure and prompt payments, providing you with
         the flexibility to settle your bills conveniently. Embrace a modern and efficient electricity management
         experience with our Electricity Billing System.</p>
+       <p> Current tariff rate:-<ul><li>₹6 for first 100 units</li><li>₹7 for next 100 units(101-200 units)</li><li>₹8 for next remaining units(201 and above units)</li></ul>
+  </p>
+  <p> Current Subsidy Rate:-<ul> <li> 15% for Above Poverty Line</li><li> 20% for Below Poverty Line</li></ul></p>
     </div>
   </div>
 
   <div class="footer">
-        <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>
+        <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009< /p>
 
   </div>
 

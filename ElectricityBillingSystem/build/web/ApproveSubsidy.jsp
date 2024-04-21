@@ -98,7 +98,7 @@
     </div>
 
     <div class="footer">
-        <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>
+        <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009</p>
     </div>
 </body>
 </html>

@@ -1,11 +1,19 @@
+<%-- 
+    Document   : getYourBill
+    Created on : Mar 9, 2024, 9:53:05 PM
+    Author     : hp
+--%>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
+
 <!DOCTYPE html>
+
 <html lang="en">
+    
 
     <head>
         <!-- Required meta tags -->
@@ -38,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="home2.jsp">Home <span class="sr-only">(current)</span></a>
                     </li>
 
@@ -59,7 +67,7 @@
                             var logoutConfirmed = confirm("Are you sure you want to logout?");
                             if (logoutConfirmed) {
                                 // Redirect to home.html after logout confirmation
-                                window.location.href = "home.html";
+                                window.location.href = "logout.jsp";
                             } else {
                                 // Do nothing or handle the cancellation
                                 alert("Logout cancelled.");
@@ -85,17 +93,21 @@
 
         </main>
 <div class="container">
-        <h2>Check for Maintenance cuts</h2>
+        <h2>Enter the details to get your bill</h2>
         <!-- Added form tag with the 'action' attribute for redirection -->
-        <form action="isPowerAvailable" method="post">
+        <form action="getYourBill" method="post">
 
             <div class="box">
-                <i class="fa-solid fa-shield-halved"></i>
-                <input type="number" name="pincode" id="pincode" placeholder="Enter your area Pincode">
+                <i class="fa-solid fa-user"></i>
+                <input type="number" id="meternum" name="meternum" placeholder="Enter Meter Number" required>
             </div>
 
-
-            <!-- Added 'type="submit"' to the button and 'form' attribute -->
+            <div class="box">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="date" id="readingdate" name="readingdate" placeholder="Reading Date" required>
+            </div>
+            
+            
             <button type="submit">Check</button>
         </form>
     </div>
