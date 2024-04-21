@@ -60,6 +60,10 @@
         <servlet-name>BillingBE</servlet-name>
         <servlet-class>Electricity_billing_system.BillingBE</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>getYourBill</servlet-name>
+        <servlet-class>Electricity_billing_system.getYourBill</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>adminVerificationBE</servlet-name>
         <url-pattern>/adminVerificationBE</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>BillingBE</servlet-name>
         <url-pattern>/BillingBE</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getYourBill</servlet-name>
+        <url-pattern>/getYourBill</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
