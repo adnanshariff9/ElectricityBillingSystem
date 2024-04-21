@@ -143,7 +143,7 @@ out.println("</div>");
   out.println("</center>");
   out.println("<br/>");
   out.println("<div class=\"footer\">\n" +
-"    <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>\n" +
+"    <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009</p>\n" +
 "  </div>");
             out.println("</body>");
             out.println("</html>");
