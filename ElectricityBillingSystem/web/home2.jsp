@@ -59,7 +59,7 @@
         var logoutConfirmed = confirm("Are you sure you want to logout?");
         if (logoutConfirmed) {
             // Redirect to home.html after logout confirmation
-            window.location.href = "home.html";
+            window.location.href = "logout.jsp";
         } else {
             // Do nothing or handle the cancellation
             alert("Logout cancelled.");
@@ -84,9 +84,11 @@
             <p class="hidden">Pincode: <%= session.getAttribute("pincode") %></p>
             <p class="hidden">new connection status: <%= session.getAttribute("newConnectionStatus") %></p>
             <p class="hidden">new subsidy status: <%= session.getAttribute("newSubsidyStatus") %></p>
+            <p class="hidden">User ID: <%= session.getAttribute("userID") %></p> 
 
             <style>
                 .hidden {
+                    
                     display: none;
                 }
             </style>
@@ -113,7 +115,7 @@
         <h2>Get your bill online </h2>
         <p> 
 Losing your physical electricity bill is no longer a hassle with the convenience of online billing systems. Easily access and retrieve your bills at your convenience with an internet connection. By going paperless, customers contribute to environmental sustainability and save trees. </p>
-        <p class="mt-auto"><a class="btn btn-secondary" href="getYourBill.jsp" role="button" >View details »</a></p>
+        <p class="mt-auto"><a class="btn btn-secondary" href="getYourBill.jsp" role="button" > Get your Bill</a></p>
       </div>
       <div class="col-md-3 text-center">
           <center> <img src="p10.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" /></center>
@@ -143,7 +145,7 @@ Losing your physical electricity bill is no longer a hassle with the convenience
     
     
   <div class="footer">
-        <p>&diams; 2023-2024 Electricity Billing System - by ADNAN SHARIFF 1HK21IS009</p>
+        <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009</p>
 
   </div>
 
