@@ -38,6 +38,8 @@ public class LoginVerificationBE extends HttpServlet {
                     
                     session.setAttribute("email", email);
                     
+                    session.setAttribute("userID", rs.getInt("UserID"));
+
                     session.setAttribute("name", rs.getString("name"));
                     session.setAttribute("AadharCardNumber", rs.getLong("AadharCardNumber"));
                     session.setAttribute("phone", rs.getLong("phone"));
