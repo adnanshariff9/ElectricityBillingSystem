@@ -42,7 +42,7 @@
           <a class="nav-link" href="about2.jsp">About</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="contactus.jsp">Contact us</a>
+          <a class="nav-link" href="contactus2.jsp">Contact us</a>
         </li>
 
        <li class="nav-item">
@@ -101,7 +101,7 @@
   </div>
 
   <div class="footer">
-        <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009< /p>
+        <p>&diams; 2023-2024 Electricity Billing System - by Adnan Shariff 1HK21IS009 </p>
 
   </div>
 
