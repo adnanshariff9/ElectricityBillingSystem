@@ -13,8 +13,9 @@ Salient features:-
 Technology Stack:-
 * Java (JDBC) jdk1.8 for backend
 * HTML5 CSS3 and JavaScript for frontend
-* MySQL v5.5 for Database
+* MySQL v5.5 for Database ,SQLyog as database IDE
 * NetBeans 8.2 as IDE
+* Oracke GlassFish as server
 
 Software Requirements:-
 * https://drive.google.com/drive/folders/1QzOUB5_-w21plpgxJcC9iCPaWz94W-8a
