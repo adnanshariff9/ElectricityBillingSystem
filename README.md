@@ -1,4 +1,4 @@
-Welcome to my Electricity Billing System 
+Welcome to my Electricity Billing System. 
 Developed a streamlined full-stack java web application for a Electricity Billing System, seamlessly integrating Create, Read, Update, and Delete (CRUD) functionalities. The project boasts a user-friendly interface, enabling efficient management of user data.
 
 Salient features:-
