@@ -46,10 +46,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
+          <a class="nav-link" href="home2.jsp">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about2.jsp">About</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="contactus.html">Contact us</a>

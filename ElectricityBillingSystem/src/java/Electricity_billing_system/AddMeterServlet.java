@@ -23,29 +23,38 @@ import javax.servlet.http.HttpServletResponse;
 public class AddMeterServlet extends HttpServlet {
 
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        throws ServletException, IOException {
+    response.setContentType("text/html;charset=UTF-8");
+    PrintWriter out = response.getWriter();
 
-        try {
-            // Get user ID, email, meter number, and installation date from the form
-            int userId = Integer.parseInt(request.getParameter("userId"));
-            String email = request.getParameter("email");
-            String meterNumber = request.getParameter("meterNumber");
-            String installationDate = request.getParameter("installationDate");
+    try {
+        // Get user ID, email, meter number, and installation date from the form
+        int userId = Integer.parseInt(request.getParameter("userId"));
+        String email = request.getParameter("email");
+        String meterNumber = request.getParameter("meterNumber");
+        String installationDate = request.getParameter("installationDate");
 
-            // Insert new meter information into the meters table
-            insertMeterInfo(userId, email, meterNumber, installationDate);
+        // Insert new meter information into the meters table
+        insertMeterInfo(userId, email, meterNumber, installationDate);
 
-            response.getWriter().println("Meter information added successfully!");
-                        response.getWriter().println("<br><a href=\"adminhome.html\">Return to Admin Home</a>");
+        // JavaScript for alert box on successful insertion
+        out.println("<script type=\"text/javascript\">");
+        out.println("alert('Meter information added successfully!');");
+        out.println("window.location = 'adminhome.html';");
+        out.println("</script>");
 
-
-        } catch (Exception e) {
-            // Handle errors
-            e.printStackTrace();
-            response.getWriter().println("Error: " + e.getMessage());
-        }
+    } catch (Exception e) {
+        // Handle errors
+        e.printStackTrace();
+        out.println("<script type=\"text/javascript\">");
+        out.println("alert('Error: " + e.getMessage().replaceAll("'", "\\\\'") + "');");
+        out.println("window.history.back();"); // Go back to the form page
+        out.println("</script>");
+    } finally {
+        out.close();
     }
+}
+
 
     private void insertMeterInfo(int userId, String email, String meterNumber, String installationDate) throws SQLException, ClassNotFoundException {
         Connection con = dbconnection.getConnectToElectricity_billing_system();
